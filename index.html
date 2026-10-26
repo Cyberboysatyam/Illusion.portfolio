@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07100c">
+  <meta name="description" content="Satyam Yadav — Aspiring Full-Stack Web Developer, AI & Cybersecurity Enthusiast. Explore live GitHub repositories, interactive terminal simulator, and detailed project case studies.">
+  <meta name="keywords" content="Satyam Yadav, Cyberboysatyam, Cybersecurity, Full-Stack Developer, AI Developer, OSINT, Termux, Python, Shell, Portfolio">
+  <meta name="author" content="Satyam Yadav">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Satyam Yadav | Cybersecurity &amp; AI Developer Portfolio">
+  <meta property="og:description" content="Futuristic, interactive portfolio featuring live GitHub integrations, browser terminal simulator, and cybersecurity projects.">
+  
+  <title>Satyam Yadav | Cybersecurity &amp; AI Developer Portfolio</title>
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient Cyber Overlays -->
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scanline-overlay" aria-hidden="true"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Satyam Yadav home">
+      <span class="brand-mark">SY</span>
+      <span>satyam<span class="accent">.dev</span></span>
+    </a>
+
+    <div class="header-status-pill" aria-label="System status telemetry">
+      <span class="pulse-dot"></span>
+      <span>SYS_ONLINE // PING: <span id="headerLatency">24</span>ms</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#terminal">Terminal</a>
+      <a href="#case-studies">Case Studies</a>
+      <a href="#live-repos">Live Repos</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="header-cta" href="resume.pdf" download="Satyam_Yadav_Resume.pdf" aria-label="Download Satyam's Resume PDF">
+        <span>RESUME.PDF</span>
+        <span aria-hidden="true">⇩</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         00: HERO / COMMAND CENTER
+         ==================================================================== -->
+    <section class="section hero" id="home">
+      <div class="hero-copy-col">
+        <div class="hero-hud-badge">
+          <span class="pulse-dot"></span>
+          <span>SYS_ID: CYBERBOY_SATYAM · NODE: INDIA · REPO_COUNT: 6+</span>
+        </div>
+
+        <h1 class="hero-title">
+          SATYAM<br>
+          <span class="accent">YADAV</span>
+        </h1>
+
+        <div class="hero-role-banner" aria-live="polite">
+          <span class="role-prefix">&gt; </span>
+          <span id="roleTypingText" class="role-text">Full-Stack Web &amp; Cybersecurity</span>
+          <span class="typing-cursor" aria-hidden="true"></span>
+        </div>
+
+        <p class="hero-description">
+          Aspiring Full-Stack Web Developer passionate about artificial intelligence, defensive cybersecurity, and open-source intelligence (OSINT). I engineer responsive digital web interfaces, explore security workflows on Linux/Termux, and build terminal automation scripts.
+        </p>
+
+        <!-- Live Telemetry HUD Bar -->
+        <div class="hero-telemetry-hud">
+          <div class="telemetry-item">
+            <span class="telemetry-label">Identity</span>
+            <span class="telemetry-value">CyberBoy Satyam</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">Primary Stack</span>
+            <span class="telemetry-value accent">Web · Python · Shell</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">Verified Repos</span>
+            <span class="telemetry-value" id="hudRepoCount">6 Public</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="telemetry-label">Availability</span>
+            <span class="telemetry-value accent">Open to Work</span>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions">
+          <a class="button button-primary" href="#case-studies">
+            <span>Explore Work</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a class="button button-secondary" href="#terminal">
+            <span>Launch Terminal</span>
+            <span aria-hidden="true">~/</span>
+          </a>
+          <a class="button button-outline" href="resume.pdf" download="Satyam_Yadav_Resume.pdf">
+            <span>Download Resume</span>
+            <span aria-hidden="true">⇩</span>
+          </a>
+        </div>
+
+        <!-- Hero Social & Contact Links -->
+        <div class="hero-social-links">
+          <a href="https://github.com/Cyberboysatyam" target="_blank" rel="noopener noreferrer" title="GitHub Profile — @Cyberboysatyam">
+            <svg class="social-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            <span>GitHub</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://tryhackme.com/p/IllusionSatyam" target="_blank" rel="noopener noreferrer" title="TryHackMe — IllusionSatyam">
+            <svg class="social-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <path d="m9 12 2 2 4-4"/>
+            </svg>
+            <span>TryHackMe — IllusionSatyam</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.instagram.com/sudo.soul.rooted/" target="_blank" rel="noopener noreferrer" title="Instagram — @sudo.soul.rooted">
+            <svg class="social-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+            </svg>
+            <span>@sudo.soul.rooted</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://wa.me/918780892641?text=Hi%20Satyam%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" title="WhatsApp — Chat on WhatsApp">
+            <svg class="social-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>WhatsApp</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a href="mailto:satyam.cybersec@gmail.com" title="Email Satyam Yadav">
+            <svg class="social-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>Email</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <a class="scroll-cue" href="#terminal">
+          <span></span>
+          <span>SCROLL TO COMMAND CENTER</span>
+        </a>
+      </div>
+
+      <!-- 3D Cyber Globe Visual Column -->
+      <div class="hero-visual-col" aria-label="Interactive 3D wireframe cyber network globe">
+        <div class="globe-canvas-wrap">
+          <canvas id="cyberGlobeCanvas" width="440" height="440" aria-label="3D Cyber Globe Visualization"></canvas>
+          
+          <!-- Telemetry Badges -->
+          <div class="globe-badge globe-badge-top">
+            <span>● SECURE_CHANNEL // TLS 1.3</span>
+          </div>
+          <div class="globe-badge globe-badge-bottom">
+            <span>RADAR_SCAN: ACTIVE · 28★ VERIFIED</span>
+          </div>
+          
+          <div class="globe-controls-hint">
+            <span>[ DRAG TO ROTATE 3D NETWORK · INTERACTIVE NODES ]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         01: INTERACTIVE HACKER TERMINAL SIMULATOR
+         ==================================================================== -->
+    <section class="section terminal-section" id="terminal">
+      <div class="section-heading">
+        <p class="eyebrow">01 / BROWSER SHELL SIMULATOR</p>
+        <h2>Interactive <span class="accent">Hacker Terminal</span></h2>
+        <p class="section-desc">
+          Fully functional browser-based terminal simulator. Run commands to query portfolio details, inspect real repositories, examine technical skills, or trigger resume downloads in a client-side sandbox.
+        </p>
+      </div>
+
+      <div class="terminal-container" id="terminalContainer">
+        <!-- Terminal Header Bar -->
+        <div class="terminal-header">
+          <div class="terminal-controls">
+            <span class="term-dot dot-red"></span>
+            <span class="term-dot dot-yellow"></span>
+            <span class="term-dot dot-green"></span>
+          </div>
+          <div class="terminal-title">
+            <span>satyam@portfolio-terminal: ~ (bash / zsh simulated)</span>
+            <span class="terminal-badge">v2.4.0-web</span>
+          </div>
+          <div class="terminal-actions-top">
+            <button class="term-action-btn" id="btnCopyTerminal" title="Copy output to clipboard">Copy</button>
+            <button class="term-action-btn" id="btnClearTerminal" title="Clear terminal output">Clear</button>
+          </div>
+        </div>
+
+        <!-- Quick Command Chips for 1-Click Access / Mobile -->
+        <div class="terminal-quick-chips" aria-label="Quick command shortcuts">
+          <span class="chip-label">QUICK COMMANDS:</span>
+          <button class="cmd-chip" data-cmd="help">help</button>
+          <button class="cmd-chip" data-cmd="about">about</button>
+          <button class="cmd-chip" data-cmd="skills">skills</button>
+          <button class="cmd-chip" data-cmd="projects">projects</button>
+          <button class="cmd-chip" data-cmd="tryhackme">tryhackme</button>
+          <button class="cmd-chip" data-cmd="instagram">instagram</button>
+          <button class="cmd-chip" data-cmd="whatsapp">whatsapp</button>
+          <button class="cmd-chip" data-cmd="github">github</button>
+          <button class="cmd-chip" data-cmd="contact">contact</button>
+          <button class="cmd-chip" data-cmd="resume">resume</button>
+          <button class="cmd-chip" data-cmd="whoami">whoami</button>
+          <button class="cmd-chip" data-cmd="matrix">matrix</button>
+          <button class="cmd-chip" data-cmd="clear">clear</button>
+        </div>
+
+        <!-- Scrollable Output Screen -->
+        <div class="terminal-screen" id="terminalScreen" role="region" aria-live="polite" aria-label="Terminal output screen">
+          <pre class="term-ascii">
+ ███████╗ █████╗ ████████╗██╗   ██╗ █████╗ ███╗   ███╗
+ ██╔════╝██╔══██╗╚══██╔══╝╚██╗ ██╔╝██╔══██╗████╗ ████║
+ ███████╗███████║   ██║    ╚████╔╝ ███████║██╔████╔██║
+ ╚════██║██╔══██║   ██║     ╚██╔╝  ██╔══██║██║╚██╔╝██║
+ ███████║██║  ██║   ██║      ██║   ██║  ██║██║ ╚═╝ ██║
+ ╚══════╝╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚═╝  ╚═╝╚═╝     ╚═╝</pre>
+          <div class="term-line">
+            <span class="term-highlight">[Satyam Yadav — Cybersecurity &amp; AI Developer Terminal CLI]</span>
+          </div>
+          <div class="term-line">
+            Type <span class="term-prompt">'help'</span> to see all available commands. Use <span class="term-highlight">Arrow Up/Down</span> for command history.
+          </div>
+          <div id="terminalHistoryOutput"></div>
+          
+          <!-- Active Input Row -->
+          <div class="terminal-input-row" id="terminalActiveRow">
+            <span class="term-prompt">satyam@dev</span>:<span class="term-path">~</span>$&nbsp;
+            <input type="text" id="terminalInput" class="terminal-cli-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command input" placeholder="type 'help' or 'about'...">
+          </div>
+        </div>
+
+        <!-- Safe Sandbox Disclaimer Bar -->
+        <div class="terminal-disclaimer-bar">
+          <span>● Simulated Client-Side Sandbox · Safe Execution Only</span>
+          <span>Press Enter to Run · ↑/↓ for History</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         02: ABOUT ME & DOSSIER
+         ==================================================================== -->
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">02 / DOSSIER</p>
+        <h2>About <span class="accent">Satyam Yadav</span></h2>
+        <p class="section-desc">
+          Background profile, developer philosophy, and focus areas across frontend web development and cybersecurity.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="dossier-card">
+          <div class="dossier-header">
+            <span class="dossier-id"><span>01</span> profile.md</span>
+            <span class="dossier-status">● VERIFIED DEVELOPER PROFILE</span>
+          </div>
+
+          <div class="dossier-content">
+            <p>
+              I am an aspiring full-stack web developer and cybersecurity enthusiast driven by practical curiosity and hands-on experimentation. My development journey revolves around writing responsive web applications with clean, semantic foundations and exploring how security principles, automation, and artificial intelligence intersect with modern web software.
+            </p>
+            <p>
+              Rather than merely studying theory, I build personal projects, configure Linux/Termux environments, and craft terminal utilities. I use my public GitHub repositories to document real code, learn from challenges, and continually elevate my problem-solving ability.
+            </p>
+          </div>
+
+          <!-- Ethical Security Pledge -->
+          <div class="integrity-badge">
+            <span class="integrity-icon">⛨</span>
+            <div class="integrity-text">
+              <strong>Defensive Security &amp; Educational Research Pledge</strong>
+              All security scripts, red-team tooling demonstrations, and OSINT workflow investigations are conducted strictly for educational purposes, defensive posture verification, and authorized security research.
+            </div>
+          </div>
+
+          <!-- Dedicated Verified Cybersecurity & Social Profiles -->
+          <div class="verified-profiles-bar" aria-label="Verified developer profiles">
+            <span class="profiles-bar-label">PROFILES:</span>
+            <a href="https://tryhackme.com/p/IllusionSatyam" target="_blank" rel="noopener noreferrer" class="verified-profile-tag" title="TryHackMe — IllusionSatyam">
+              <span class="profile-tag-icon">⛨</span>
+              <span>TryHackMe — IllusionSatyam</span>
+              <span class="ext-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://www.instagram.com/sudo.soul.rooted/" target="_blank" rel="noopener noreferrer" class="verified-profile-tag" title="Instagram — @sudo.soul.rooted">
+              <span class="profile-tag-icon">◎</span>
+              <span>@sudo.soul.rooted</span>
+              <span class="ext-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a href="https://github.com/Cyberboysatyam" target="_blank" rel="noopener noreferrer" class="verified-profile-tag" title="GitHub — Cyberboysatyam">
+              <span class="profile-tag-icon">⌘</span>
+              <span>Cyberboysatyam</span>
+              <span class="ext-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Telemetry Metrics & Focus Cards -->
+        <div class="about-metrics-col">
+          <div class="hud-stat-box">
+            <div class="hud-stat-header">
+              <span class="hud-stat-icon">&lt;/&gt;</span>
+              <span class="hud-stat-code">AREA_01</span>
+            </div>
+            <h4>Web Engineering</h4>
+            <p>Semantic HTML5, modern CSS3 layouts, vanilla JavaScript DOM manipulation, and responsive single-page architectures.</p>
+          </div>
+
+          <div class="hud-stat-box">
+            <div class="hud-stat-header">
+              <span class="hud-stat-icon">⛨</span>
+              <span class="hud-stat-code">AREA_02</span>
+            </div>
+            <h4>Cybersecurity &amp; Red-Team Tools</h4>
+            <p>Hands-on exploration in Linux and Termux environments, payload automation concepts, and authentication auditing scripts.</p>
+            <div style="margin-top:12px;">
+              <a href="https://tryhackme.com/p/IllusionSatyam" target="_blank" rel="noopener noreferrer" class="thm-link-pill" title="Open TryHackMe Profile">
+                <span class="pulse-dot" style="width:6px; height:6px;"></span>
+                <span>TryHackMe — IllusionSatyam</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hud-stat-box">
+            <div class="hud-stat-header">
+              <span class="hud-stat-icon">⌁</span>
+              <span class="hud-stat-code">AREA_03</span>
+            </div>
+            <h4>AI &amp; Intelligent Assistants</h4>
+            <p>Exploring large language model prompt architectures, developer assistant tooling, and AI integration for web workflows.</p>
+          </div>
+
+          <div class="hud-stat-box">
+            <div class="hud-stat-header">
+              <span class="hud-stat-icon">⌕</span>
+              <span class="hud-stat-code">AREA_04</span>
+            </div>
+            <h4>OSINT Reconnaissance</h4>
+            <p>Open-source intelligence gathering techniques, public data reconnaissance workflows, and digital footprints analysis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         03: TECHNICAL SKILLS
+         ==================================================================== -->
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">03 / TOOLKIT &amp; STACK</p>
+        <h2>Technical <span class="accent">Skills</span></h2>
+        <p class="section-desc">
+          Verified technologies, languages, environments, and specialized domains actively explored across projects.
+        </p>
+      </div>
+
+      <div class="skills-container">
+        <!-- Category 1 -->
+        <div class="skill-category-card">
+          <div class="skill-card-top">
+            <span class="skill-icon">&lt;/&gt;</span>
+            <span class="skill-index">SKILLSET_01</span>
+          </div>
+          <h3>Programming &amp; Web Core</h3>
+          <p class="skill-desc">Languages and technologies used to construct responsive web applications and automation scripts.</p>
+          <div class="skill-tag-cloud">
+            <span class="skill-tag accent-tag">Python 3</span>
+            <span class="skill-tag accent-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">HTML5 Semantic</span>
+            <span class="skill-tag">CSS3 / Flexbox / Grid</span>
+            <span class="skill-tag">Bash / Shell</span>
+            <span class="skill-tag">DOM Manipulation</span>
+            <span class="skill-tag">REST APIs &amp; Fetch</span>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="skill-category-card">
+          <div class="skill-card-top">
+            <span class="skill-icon">⌘</span>
+            <span class="skill-index">SKILLSET_02</span>
+          </div>
+          <h3>Platforms &amp; Environments</h3>
+          <p class="skill-desc">Operating systems, terminal platforms, and version control tools used for daily development.</p>
+          <div class="skill-tag-cloud">
+            <span class="skill-tag accent-tag">Linux / Debian / Ubuntu</span>
+            <span class="skill-tag accent-tag">Termux (Android)</span>
+            <span class="skill-tag">Git &amp; GitHub</span>
+            <span class="skill-tag">Zsh / Bash Terminal</span>
+            <span class="skill-tag">cURL &amp; Networking</span>
+            <span class="skill-tag">Package Management (APT/PIP)</span>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="skill-category-card">
+          <div class="skill-card-top">
+            <span class="skill-icon">⌬</span>
+            <span class="skill-index">SKILLSET_03</span>
+          </div>
+          <h3>Security &amp; AI Exploration</h3>
+          <p class="skill-desc">Specialized investigative domains, security research concepts, and modern AI tool integrations.</p>
+          <div class="skill-tag-cloud">
+            <span class="skill-tag accent-tag">OSINT Reconnaissance</span>
+            <span class="skill-tag accent-tag">Red-Team Scripting</span>
+            <span class="skill-tag">Credential Auditing Research</span>
+            <span class="skill-tag">Payload Automation Concepts</span>
+            <span class="skill-tag">AI Developer Toolchains</span>
+            <span class="skill-tag">Prompt Engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         04: DETAILED PROJECT CASE STUDIES
+         ==================================================================== -->
+    <section class="section" id="case-studies">
+      <div class="section-heading">
+        <p class="eyebrow">04 / SELECTED WORK &amp; CASE STUDIES</p>
+        <h2>Project <span class="accent">Case Studies</span></h2>
+        <p class="section-desc">
+          Verified GitHub repositories and architectural case studies. Click any project card to inspect technical architecture, implemented features, and direct source code without fabricated statistics.
+        </p>
+      </div>
+
+      <div class="case-studies-grid">
+        <!-- Project 1: Whatsapp-Banner -->
+        <article class="case-study-card" data-project-id="whatsapp-banner">
+          <div class="case-visual visual-python">
+            <span class="visual-tag-label">SECURITY UTILITY</span>
+            <span class="visual-icon-symbol">⛨</span>
+            <div class="visual-radar-scan"></div>
+          </div>
+          <div class="case-body">
+            <div class="case-header-meta">
+              <span class="case-badge verified">● VERIFIED REPO</span>
+              <span class="case-stars-count">★ 28 Stars</span>
+            </div>
+            <h3>Whatsapp-Banner</h3>
+            <p class="case-snippet">
+              A Python 3 terminal-based red-team security utility script built for Linux and Termux environments, featuring automated environment setup and modular CLI menus.
+            </p>
+            <div class="case-tech-chips">
+              <span>Python 3</span>
+              <span>Linux</span>
+              <span>Termux</span>
+              <span>Shell</span>
+            </div>
+            <div class="case-footer-actions">
+              <button class="btn-case-detail" data-project="whatsapp-banner">Read Case Study <span>→</span></button>
+              <a class="case-src-link" href="https://github.com/Cyberboysatyam/Whatsapp-Banner" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Brute-X -->
+        <article class="case-study-card" data-project-id="brute-x">
+          <div class="case-visual visual-shell">
+            <span class="visual-tag-label">SECURITY AUDIT</span>
+            <span class="visual-icon-symbol">⚡</span>
+            <div class="visual-radar-scan"></div>
+          </div>
+          <div class="case-body">
+            <div class="case-header-meta">
+              <span class="case-badge verified">● VERIFIED REPO</span>
+              <span class="case-stars-count">★ 1 Star</span>
+            </div>
+            <h3>Brute-X</h3>
+            <p class="case-snippet">
+              A shell script designed for multi-target authentication auditing research. Features password list detection algorithms and network loading error handling routines.
+            </p>
+            <div class="case-tech-chips">
+              <span>Bash Shell</span>
+              <span>CLI Scripting</span>
+              <span>Linux / Termux</span>
+            </div>
+            <div class="case-footer-actions">
+              <button class="btn-case-detail" data-project="brute-x">Read Case Study <span>→</span></button>
+              <a class="case-src-link" href="https://github.com/Cyberboysatyam/Brute-X" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: SimpleVenom 1.2 -->
+        <article class="case-study-card" data-project-id="simplevenom">
+          <div class="case-visual visual-shell">
+            <span class="visual-tag-label">PAYLOAD AUTOMATION</span>
+            <span class="visual-icon-symbol">⌘</span>
+            <div class="visual-radar-scan"></div>
+          </div>
+          <div class="case-body">
+            <div class="case-header-meta">
+              <span class="case-badge verified">● VERIFIED REPO</span>
+              <span class="case-stars-count">★ 1 Star</span>
+            </div>
+            <h3>SimpleVenom 1.2</h3>
+            <p class="case-snippet">
+              An upgraded automation shell script designed to streamline payload generation and educational security testing workflows on Linux command lines.
+            </p>
+            <div class="case-tech-chips">
+              <span>Bash</span>
+              <span>Automation</span>
+              <span>Security Research</span>
+            </div>
+            <div class="case-footer-actions">
+              <button class="btn-case-detail" data-project="simplevenom">Read Case Study <span>→</span></button>
+              <a class="case-src-link" href="https://github.com/Cyberboysatyam/simplevenom1.2" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: Nexus AI -->
+        <article class="case-study-card" data-project-id="nexus-ai">
+          <div class="case-visual visual-ai">
+            <span class="visual-tag-label">AI ASSISTANT</span>
+            <span class="visual-icon-symbol">◈</span>
+            <div class="visual-radar-scan"></div>
+          </div>
+          <div class="case-body">
+            <div class="case-header-meta">
+              <span class="case-badge concept">● ARCHITECTURE CONCEPT</span>
+              <span class="case-stars-count" style="color:var(--muted);">In Design</span>
+            </div>
+            <h3>Nexus AI</h3>
+            <p class="case-snippet">
+              An AI developer assistant architecture concept investigating prompt chains, client-side conversation state, and intelligent code assistance tooling.
+            </p>
+            <div class="case-tech-chips">
+              <span>AI Tooling</span>
+              <span>LLM Workflow</span>
+              <span>To Be Documented</span>
+            </div>
+            <div class="case-footer-actions">
+              <button class="btn-case-detail" data-project="nexus-ai">Read Case Study <span>→</span></button>
+              <a class="case-src-link" href="https://github.com/Cyberboysatyam" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: OSINT Tool -->
+        <article class="case-study-card" data-project-id="osint-tool">
+          <div class="case-visual visual-osint">
+            <span class="visual-tag-label">RECONNAISSANCE</span>
+            <span class="visual-icon-symbol">⌕</span>
+            <div class="visual-radar-scan"></div>
+          </div>
+          <div class="case-body">
+            <div class="case-header-meta">
+              <span class="case-badge concept">● RESEARCH CONCEPT</span>
+              <span class="case-stars-count" style="color:var(--muted);">In Research</span>
+            </div>
+            <h3>OSINT Investigation Tool</h3>
+            <p class="case-snippet">
+              A reconnaissance workflow concept modeling public domain verification, DNS record gathering, and open-source threat intelligence aggregation.
+            </p>
+            <div class="case-tech-chips">
+              <span>OSINT</span>
+              <span>Public Intelligence</span>
+              <span>To Be Documented</span>
+            </div>
+            <div class="case-footer-actions">
+              <button class="btn-case-detail" data-project="osint-tool">Read Case Study <span>→</span></button>
+              <a class="case-src-link" href="https://github.com/Cyberboysatyam" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Web Development & Remote Panel Work -->
+        <article class="case-study-card" data-project-id="webpenal">
+          <div class="case-visual visual-web">
+            <span class="visual-tag-label">WEB CONTROL PANEL</span>
+            <span class="visual-icon-symbol">{ }</span>
+            <div class="visual-radar-scan"></div>
+          </div>
+          <div class="case-body">
+            <div class="case-header-meta">
+              <span class="case-badge verified">● VERIFIED REPO</span>
+              <span class="case-stars-count">Frontend UI</span>
+            </div>
+            <h3>Webpenal &amp; Frontend Projects</h3>
+            <p class="case-snippet">
+              Frontend web interfaces exploring control panel layouts, remote management UI dashboards, and responsive cross-device layout design.
+            </p>
+            <div class="case-tech-chips">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>UI Design</span>
+            </div>
+            <div class="case-footer-actions">
+              <button class="btn-case-detail" data-project="webpenal">Read Case Study <span>→</span></button>
+              <a class="case-src-link" href="https://github.com/Cyberboysatyam/webpenal" target="_blank" rel="noopener noreferrer">Source ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         05: LIVE GITHUB PROJECTS INTEGRATION
+         ==================================================================== -->
+    <section class="section" id="live-repos">
+      <div class="section-heading">
+        <p class="eyebrow">05 / LIVE GITHUB INTEGRATION</p>
+        <h2>Live Public <span class="accent">Repositories</span></h2>
+        <p class="section-desc">
+          Dynamically fetched from my official GitHub account (<a href="https://github.com/Cyberboysatyam" target="_blank" rel="noopener noreferrer" class="term-link">@Cyberboysatyam</a>) via the GitHub REST API. Real statistics, confirmed primary languages, and instant search/filtering.
+        </p>
+      </div>
+
+      <!-- Controls & Filter Bar -->
+      <div class="repos-controls-bar">
+        <div class="controls-top-row">
+          <div class="search-box-wrap">
+            <input type="text" id="repoSearchInput" class="repo-search-input" placeholder="Search repositories by name or keyword..." aria-label="Search repositories">
+          </div>
+          <div class="sort-select-wrap">
+            <label for="repoSortSelect">Sort By:</label>
+            <select id="repoSortSelect" class="repo-sort-select" aria-label="Sort repositories">
+              <option value="updated">Recently Updated</option>
+              <option value="stars">Most Stars (★)</option>
+              <option value="name">Alphabetical (A-Z)</option>
+              <option value="forks">Most Forks</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="controls-bottom-row">
+          <!-- Dynamic Language Filter Chips -->
+          <div class="language-filter-group" id="languageFilters" aria-label="Filter by programming language">
+            <button class="lang-filter-btn active" data-lang="all">All</button>
+            <button class="lang-filter-btn" data-lang="python">Python</button>
+            <button class="lang-filter-btn" data-lang="shell">Shell</button>
+            <button class="lang-filter-btn" data-lang="html">HTML</button>
+          </div>
+
+          <div class="api-status-indicator">
+            <span id="apiStatusText">● API Status: Ready</span>
+            <button class="sync-repos-btn" id="btnSyncRepos" title="Refresh repositories from GitHub API">
+              <span aria-hidden="true">↻</span> Sync Repos
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Repositories Grid Container -->
+      <div class="repos-grid-container" id="reposGrid" aria-live="polite">
+        <!-- Skeleton loading placeholder cards injected by script.js -->
+        <div class="skeleton-card"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line skeleton-desc-1"></div><div class="skeleton-line skeleton-desc-2"></div><div class="skeleton-line skeleton-footer"></div></div>
+        <div class="skeleton-card"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line skeleton-desc-1"></div><div class="skeleton-line skeleton-desc-2"></div><div class="skeleton-line skeleton-footer"></div></div>
+        <div class="skeleton-card"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line skeleton-desc-1"></div><div class="skeleton-line skeleton-desc-2"></div><div class="skeleton-line skeleton-footer"></div></div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         06: EDUCATION & EXPERIENCE
+         ==================================================================== -->
+    <section class="section" id="education">
+      <div class="section-heading">
+        <p class="eyebrow">06 / BACKGROUND &amp; PATHWAY</p>
+        <h2>Education &amp; <span class="accent">Experience</span></h2>
+        <p class="section-desc">
+          Current academic focus and professional aspirations. Sections remain editable for confirmation of diploma institution and ongoing credential details.
+        </p>
+      </div>
+
+      <div class="history-cards-wrap">
+        <!-- Education Card (Updated with honest status) -->
+        <div class="history-card">
+          <div class="history-icon-box" aria-hidden="true">▤</div>
+          <div class="history-content">
+            <div class="history-header-row">
+              <span class="history-label">ACADEMIC BACKGROUND</span>
+              <span class="history-tag status-dropout">2ND YEAR DROPOUT</span>
+            </div>
+            <h3>Diploma in Information Technology (IT) — 2nd Year Dropout</h3>
+            <p class="history-note">
+              Studied foundational information technology concepts, programming logic, computer hardware, and basic networking before stepping away during the 2nd year to focus full-time on self-directed, practical hands-on web development, AI exploration, and cybersecurity research.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experience Card -->
+        <div class="history-card">
+          <div class="history-icon-box" aria-hidden="true">↗</div>
+          <div class="history-content">
+            <div class="history-header-row">
+              <span class="history-label">CAREER OBJECTIVE</span>
+              <span class="history-tag" style="border-color:var(--green); color:var(--green);">AVAILABLE FOR HIRE</span>
+            </div>
+            <h3>Fresher / Entry-Level Candidate</h3>
+            <p class="history-note">
+              Aspiring to secure junior full-stack developer, frontend developer, or cybersecurity analyst roles. Eager to contribute disciplined effort, learn modern production codebases, and build high-quality software solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         07: CONTACT & TRANSMISSION
+         ==================================================================== -->
+    <section class="section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">07 / TRANSMISSION</p>
+        <h2>Initialize <span class="accent">Contact</span></h2>
+        <p class="section-desc">
+          Open for software engineering opportunities, cybersecurity collaboration, and project discussions.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-transmission-panel">
+          <h3>Let's build something <span class="accent">meaningful.</span></h3>
+          <p class="contact-copy">
+            Whether you have a technical question, an open-source collaboration idea, or an entry-level development opportunity, my channels are open.
+          </p>
+          
+          <div class="contact-channels-list">
+            <!-- Channel 1: WhatsApp -->
+            <div class="contact-channel-item whatsapp-channel-item">
+              <div class="channel-info">
+                <span class="channel-label">WHATSAPP DIRECT CHAT</span>
+                <span class="channel-value">+91 8780892641</span>
+              </div>
+              <a class="channel-action-btn whatsapp-cta-btn" 
+                 href="https://wa.me/918780892641?text=Hi%20Satyam%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 title="Chat on WhatsApp with Satyam Yadav">
+                <span>Chat on WhatsApp</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <!-- Channel 2: Email -->
+            <div class="contact-channel-item">
+              <div class="channel-info">
+                <span class="channel-label">EMAIL TRANSMISSION</span>
+                <span class="channel-value" id="emailDisplayValue">satyam.cybersec@gmail.com</span>
+              </div>
+              <div class="channel-actions-group">
+                <button class="channel-action-btn" id="btnCopyEmail" title="Copy email address to clipboard">
+                  Copy Email
+                </button>
+                <a class="channel-action-btn primary" href="mailto:satyam.cybersec@gmail.com">
+                  Send ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- Channel 3: TryHackMe -->
+            <div class="contact-channel-item">
+              <div class="channel-info">
+                <span class="channel-label">CYBERSECURITY PROFILE</span>
+                <span class="channel-value">TryHackMe — IllusionSatyam</span>
+              </div>
+              <a class="channel-action-btn" href="https://tryhackme.com/p/IllusionSatyam" target="_blank" rel="noopener noreferrer">
+                View Profile ↗
+              </a>
+            </div>
+
+            <!-- Channel 4: Instagram -->
+            <div class="contact-channel-item">
+              <div class="channel-info">
+                <span class="channel-label">INSTAGRAM HANDLE</span>
+                <span class="channel-value">@sudo.soul.rooted</span>
+              </div>
+              <a class="channel-action-btn" href="https://www.instagram.com/sudo.soul.rooted/" target="_blank" rel="noopener noreferrer">
+                Visit Profile ↗
+              </a>
+            </div>
+
+            <!-- Channel 5: GitHub -->
+            <div class="contact-channel-item">
+              <div class="channel-info">
+                <span class="channel-label">GITHUB PROFILE</span>
+                <span class="channel-value">github.com/Cyberboysatyam</span>
+              </div>
+              <a class="channel-action-btn" href="https://github.com/Cyberboysatyam" target="_blank" rel="noopener noreferrer">
+                Visit Profile ↗
+              </a>
+            </div>
+
+            <!-- Channel 6: Location -->
+            <div class="contact-channel-item">
+              <div class="channel-info">
+                <span class="channel-label">LOCATION &amp; TIMEZONE</span>
+                <span class="channel-value">India · IST (UTC+05:30)</span>
+              </div>
+              <span class="case-badge verified">Remote Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simulated Quick Reach Terminal -->
+        <div class="dossier-card">
+          <div class="dossier-header">
+            <span class="dossier-id"><span>02</span> direct-transmission.sh</span>
+            <span class="dossier-status">● CLIENT_READY</span>
+          </div>
+          <form id="contactQuickForm" style="display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <label for="contactSubject" style="font-family:var(--mono); font-size:10px; color:var(--dim); display:block; margin-bottom:4px;">SUBJECT:</label>
+              <input type="text" id="contactSubject" placeholder="Inquiry / Developer Role / Collaboration" required style="width:100%; padding:10px 12px; font-size:12px; border-radius:3px;">
+            </div>
+            <div>
+              <label for="contactMessage" style="font-family:var(--mono); font-size:10px; color:var(--dim); display:block; margin-bottom:4px;">MESSAGE PAYLOAD:</label>
+              <textarea id="contactMessage" rows="4" placeholder="Hello Satyam, I came across your portfolio..." required style="width:100%; padding:10px 12px; font-size:12px; border-radius:3px; resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="button button-primary" style="width:100%;">
+              <span>Generate Email Transmission ↗</span>
+            </button>
+            <p style="font-family:var(--mono); font-size:9.5px; color:var(--dim); margin:0; line-height:1.5;">
+              * Launches your preferred mail client addressed to <span class="accent">satyam.cybersec@gmail.com</span> with pre-filled content.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+  <footer class="site-footer">
+    <a class="brand" href="#home">
+      <span class="brand-mark">SY</span>
+      <span>satyam<span class="accent">.dev</span></span>
+    </a>
+
+    <div class="footer-copy">
+      Crafted with precision &amp; curiosity · <span class="accent">Satyam Yadav</span> © 2026. All security tools for authorized research only.
+    </div>
+
+    <a href="#home" class="footer-back-top" aria-label="Back to top of page">
+      <span>TOP</span>
+      <span aria-hidden="true">↑</span>
+    </a>
+  </footer>
+
+  <!-- ====================================================================
+       ACCESSIBLE PROJECT CASE STUDY MODAL DIALOG
+       ==================================================================== -->
+  <div id="caseStudyModal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalProjectTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-header-meta">
+          <span class="case-badge verified" id="modalProjectBadge">VERIFIED CASE STUDY</span>
+          <span class="case-stars-count" id="modalProjectStars">★ 28 Stars</span>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal dialog">✕</button>
+      </div>
+
+      <div class="modal-scrollable-body" id="modalBody">
+        <h2 id="modalProjectTitle">Project Title</h2>
+        <div class="diagram-box" id="modalDiagram"></div>
+        
+        <h3 class="modal-section-title">Overview &amp; Problem Solved</h3>
+        <p id="modalOverviewText"></p>
+
+        <h3 class="modal-section-title">Confirmed Implemented Features</h3>
+        <ul class="modal-feature-list" id="modalFeaturesList"></ul>
+
+        <h3 class="modal-section-title">Verified Technologies</h3>
+        <div class="case-tech-chips" id="modalTechChips"></div>
+
+        <h3 class="modal-section-title">Security &amp; Engineering Lessons</h3>
+        <p id="modalLessonsText"></p>
+      </div>
+
+      <div class="modal-footer">
+        <span class="case-badge" id="modalFooterStatus">Repository Confirmed</span>
+        <a class="button button-primary button-sm" id="modalSourceLink" href="#" target="_blank" rel="noopener noreferrer">
+          <span>View Source Code</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification element -->
+  <div id="toastNotice" class="toast-notice" role="status" aria-live="polite">Notification text</div>
+
+  <!-- Floating WhatsApp Contact Button -->
+  <a href="https://wa.me/918780892641?text=Hi%20Satyam%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp-btn" 
+     id="floatingWhatsAppBtn" 
+     aria-label="Chat on WhatsApp with Satyam Yadav" 
+     title="Chat on WhatsApp (+91 8780892641)">
+    <span class="whatsapp-btn-pulse" aria-hidden="true"></span>
+    <span class="whatsapp-btn-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </span>
+    <span class="whatsapp-btn-text">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
